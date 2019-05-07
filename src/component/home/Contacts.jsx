@@ -77,11 +77,11 @@ export const Contacts = withRouter((props) => {
   }
 
   const strangersListView = () => {
-    return contentList.content.map( stranger => 
+    return contentList.content.filter( it => it !== NAME).map( stranger => 
       <div className='alert bg-secondary text-white my-1 p-2 d-flex justify-content-between'
-            key={stranger.name} id={'stranger-'+stranger.name}>
-        <strong>{stranger.name}</strong>
-        <button className='btn btn-success' onClick={sendRequest(stranger.name)}>
+            key={stranger} id={'stranger-'+stranger}>
+        <strong>{stranger}</strong>
+        <button className='btn btn-success' onClick={sendRequest(stranger)}>
           <small>Send Request</small>
         </button>
       </div>
