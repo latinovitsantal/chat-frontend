@@ -59,7 +59,7 @@ export class Messages extends Component {
 
 	see = () => {
 		Api.messages.see.POST({params: {
-			name:NAME, convoId: this.id, lastSeenId: this.getLast().id}
+			convoId: this.id, lastSeenId: this.getLast().id}
 		}).then( response => {
 			if (!response.data) return
 			if (!this.mounted) return

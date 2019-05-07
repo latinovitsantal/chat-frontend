@@ -65,7 +65,7 @@ export const Api = {
 		},
 		see: {
 			POST: {
-				params: { name: REQ, convoId: REQ, lastSeenId: REQ }
+				params: { convoId: REQ, lastSeenId: REQ }
 			}
 		}
 	},
